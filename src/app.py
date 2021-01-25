@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 
 @app.route("/api/process-payment/",methods = ["POST"])
-def process():
+def ProcessPayment():
 	data = request.json
 	if data.get("cardnumber") and data.get("name") and data.get("expiry") and data.get("amount"):
 		card = CardChecker(data)
